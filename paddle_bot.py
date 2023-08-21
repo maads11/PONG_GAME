@@ -22,9 +22,11 @@ class PaddleBot(turtle.Turtle):
     def paddle_bot_collision(self):
         if self.xcor() - 20 == self.ball_position.xcor() and self.ball_position.ball_current_movement == self.ball_position.ball_movement_south_east:
             self.ball_position.ball_current_movement = self.ball_position.ball_movement_south_west
+            self.ball_position.ball_speed +=0.1
 
         elif self.xcor() - 20 == self.ball_position.xcor() and self.ball_position.ball_current_movement == self.ball_position.ball_movement_north_east:
             self.ball_position.ball_current_movement = self.ball_position.ball_movement_north_west
+            self.ball_position.ball_speed +=0.1
 
 
 

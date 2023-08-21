@@ -28,6 +28,9 @@ class Paddle(turtle.Turtle):
     def paddle_collision(self):
         if self.xcor() + 20 == self.ball_position.xcor() and self.distance(self.ball_position.position()) < 100 and self.ball_position.ball_current_movement == self.ball_position.ball_movement_north_west:
             self.ball_position.ball_current_movement = self.ball_position.ball_movement_north_east
+            self.ball_position.ball_speed +=0.1
+            
         if self.xcor() + 20 == self.ball_position.xcor() and self.distance(self.ball_position.position()) < 100 and self.ball_position.ball_current_movement == self.ball_position.ball_movement_south_west:
             self.ball_position.ball_current_movement = self.ball_position.ball_movement_south_east
+            self.ball_position.ball_speed +=0.1
 
