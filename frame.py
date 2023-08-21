@@ -13,13 +13,13 @@ class Frame(turtle.Turtle):
         self.ball = ball
 
     def check_collision(self):
-        if self.ball.ball_current_movement == self.ball.ball_movement_north_east and self.ball.ycor() == 290:
+        if self.ball.ball_current_movement == self.ball.ball_movement_north_east and self.ball.ycor() >= 290:
             self.ball.ball_current_movement = self.ball.ball_movement_south_east
-        if self.ball.ball_current_movement == self.ball.ball_movement_north_west and self.ball.ycor() == 290:
+        if self.ball.ball_current_movement == self.ball.ball_movement_north_west and self.ball.ycor() >= 290:
             self.ball.ball_current_movement = self.ball.ball_movement_south_west
-        if self.ball.ball_current_movement == self.ball.ball_movement_south_east and self.ball.ycor() == -290:
+        if self.ball.ball_current_movement == self.ball.ball_movement_south_east and self.ball.ycor() <= -290:
             self.ball.ball_current_movement = self.ball.ball_movement_north_east
-        if self.ball.ball_current_movement == self.ball.ball_movement_south_west and self.ball.ycor() == -290:
+        if self.ball.ball_current_movement == self.ball.ball_movement_south_west and self.ball.ycor() <= -290:
             self.ball.ball_current_movement = self.ball.ball_movement_north_west
 
 
